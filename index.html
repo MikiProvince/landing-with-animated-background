@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Landing Page</title>
+</head>
+<body onload="slider()">
+    <header>
+        <h3 class="logo">Company</h3>
+        <nav>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+    
+    <main>
+      <div class="slider">
+        <img src="./img/1.jpeg" alt="" id="slideImg">
+      </div>
+      <div class="overlay">
+      </div>
+        
+        <div class="content">
+        <h1>
+            Introduce your company</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati a aut exercitationem. Voluptatum, quaerat alias?</p>
+          <p>
+            <button type="button"><a href="#">Learn more</a></button>
+          </p>
+        </div>
+    </main>
+    
+    <script>
+      let slideImg = document.getElementById('slideImg');
+
+      let images = ['./img/1.jpeg','./img/2.jpeg','./img/3.jpeg','./img/4.jpeg'];
+
+      let len = images.length;
+      let i = 0;
+
+      function slider() {
+        if (i>len-1) {
+          i=0;
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout('slider()', 5400);
+        }
+      
+      
+      
+    </script>
+</body>
+</html>
